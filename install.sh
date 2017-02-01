@@ -3,8 +3,9 @@ sudo apt-get install --no-install-recommends xinit matchbox xwit xserver-xorg xs
 sudo apt-get update -y
 sudo apt-get dist-upgrade -y
 
-sudo mv -f rc.local /etc/rc.local
-sudo mv -f xinitrc ~/.xinitrc
+sudo cat rc.local >> /etc/rc.local
+sudo mv -f xinitrc /etc/xinitrc
+sudo ln -sf /etc/xinitrc ~/.xinitrc
 
 echo '\nstartx\n' >> ~/.bashrc
 
