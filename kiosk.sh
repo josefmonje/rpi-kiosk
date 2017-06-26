@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Wait for screen...
 while ! $( tvservice --dumpedid /tmp/edid | fgrep -qv 'Nothing written!' ); do
 	bHadToWaitForScreen=true;
