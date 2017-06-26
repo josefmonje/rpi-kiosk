@@ -1,8 +1,7 @@
 # FROM jessie lite
 sudo cat rc.local >> /etc/rc.local
-sudo mv -f xinitrc /etc/xinitrc
-sudo ln -sf /etcx/initrx ~/.xinitrc
-echo '\nstartx\n' >> ~/.bashrc
+sudo mv -f xinitrc /boot/xinitrc
+sudo ln -sf /boot/initrx /home/pi/.xinitrc
 
 sudo apt-get install --no-install-recommends \
     xinit \
@@ -17,10 +16,4 @@ sudo apt-get install --no-install-recommends \
     unclutter \
     chromium-browser \
     rpi-chromium-mods \
-
-    #mosh \
-    #tmux \
-    #w3m-img \
-    #mc \
-    #moc \
     -y
