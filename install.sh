@@ -2,7 +2,7 @@
 
 chmod +x kiosk.sh
 mv -f kiosk.sh /boot/kiosk.sh
-echo "\n/boot/kiosk.sh\n\nexit 0\n" >> /etc/rc.local
+echo "\n/boot/kiosk.sh &\n\nexit 0\n" >> /etc/rc.local
 
 mv -f xinitrc /boot/xinitrc
 ln -sf /boot/initrx /home/pi/.xinitrc
