@@ -1,3 +1,5 @@
+#!/bin/bash
+
 chmod +x kiosk.sh
 mv -f kiosk.sh /boot/kiosk.sh
 echo "\n/boot/kiosk.sh\n\nexit 0\n" >> /etc/rc.local
