@@ -16,14 +16,11 @@ sudo apt-get install --no-install-recommends \
     libnss3 \
     unclutter \
     chromium-browser \
+    rpi-chromium-mods \
 
-    mosh \
-    tmux \
-    w3m-img \
-    mc \
-    moc \
+    #mosh \
+    #tmux \
+    #w3m-img \
+    #mc \
+    #moc \
     -y
-sudo apt-get update -y
-sudo apt-get dist-upgrade -y
-
-sudo reboot
