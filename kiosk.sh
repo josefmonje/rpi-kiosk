@@ -2,7 +2,7 @@
 while ! $( tvservice --dumpedid /tmp/edid | fgrep -qv 'Nothing written!' ); do
 	bHadToWaitForScreen=true;
 	printf "===> Waiting for screen...\n"
-	sleep 10;
+	sleep 5;
 done;
 
 printf “===> Screen is on, extracting preferred mode…\n”
