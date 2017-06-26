@@ -1,11 +1,13 @@
-# FROM jessie lite
-sudo cat rc.local >> /etc/rc.local
-sudo mv -f xinitrc /boot/xinitrc
-sudo ln -sf /boot/initrx /home/pi/.xinitrc
+chmod +x kiosk.sh
+mv -f kiosk.sh /boot/kiosk.sh
+echo "\n/boot/kiosk.sh\n\nexit 0\n" >> /etc/rc.local
 
-sudo apt-get install --no-install-recommends \
-    xinit \
+mv -f xinitrc /boot/xinitrc
+ln -sf /boot/initrx /home/pi/.xinitrc
+
+apt-get install --no-install-recommends -y \
     matchbox \
+    xinit \
     xwit \
     xserver-xorg \
     xserver-xorg-video-fbdev \
