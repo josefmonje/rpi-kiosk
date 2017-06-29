@@ -5,7 +5,7 @@ mv .xinitrc ~/.xinitrc
 
 sudo apt-get update -y && sudo apt-get upgrade -y
 
-apt-get install --no-install-recommends -y \
+sudo apt-get install --no-install-recommends -y \
     matchbox \
     xinit \
     xwit \
