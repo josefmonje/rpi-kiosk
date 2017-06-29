@@ -20,6 +20,6 @@ sleep 1;
 
 # Startup
 if [ -f /home/pi/.xinitrc ]; then
-	ln -fs /opt/.xinitrc /home/pi/.xinitrc;
-	su - pi -c 'startx' &
+	ln -fs /opt/.xinitrc /home/pic;
+	startx
 fi
