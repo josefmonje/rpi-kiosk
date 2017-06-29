@@ -10,6 +10,7 @@ sudo apt-get install --no-install-recommends -y \
     xinit \
     xwit \
     xserver-xorg \
+    xserver-xorg-legacy \
     xserver-xorg-video-fbdev \
     x11-xserver-utils \
     ttf-mscorefonts-installer \
