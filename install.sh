@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mv kiosk.sh ~
-mv .xinitrc ~/.xinitrc
+sudo mv kiosk.sh /opt
+sudo mv .xinitrc /opt
 
 sudo apt-get update -y && sudo apt-get upgrade -y
 

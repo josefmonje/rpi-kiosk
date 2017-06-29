@@ -3,7 +3,7 @@
 while ! $( tvservice --dumpedid /tmp/edid | fgrep -qv 'Nothing written!' ); do
 	bHadToWaitForScreen=true;
 	printf "===> Waiting for screen...\n"
-	sleep 3;
+	sleep ;
 done;
 
 printf “===> Screen is on, extracting preferred mode…\n”
@@ -19,7 +19,7 @@ fbset --all --geometry $_XRES $_YRES $_XRES $_YRES $_DEPTH -left 0 -right 0 -upp
 sleep 1;
 
 # Startup
-if [ -f /boot/xinitrc ]; then
-	ln -fs /boot/xinitrc /home/pi/.xinitrc;
+if [ -f /home/pi/.xinitrc ]; then
+	ln -fs /opt/.xinitrc /home/pi/.xinitrc;
 	su - pi -c 'startx' &
 fi
