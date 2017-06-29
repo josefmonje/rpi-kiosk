@@ -1,10 +1,9 @@
 #!/bin/bash
-
 # Wait for screen...
 while ! $( tvservice --dumpedid /tmp/edid | fgrep -qv 'Nothing written!' ); do
 	bHadToWaitForScreen=true;
 	printf "===> Waiting for screen...\n"
-	sleep 5;
+	sleep 3;
 done;
 
 printf “===> Screen is on, extracting preferred mode…\n”

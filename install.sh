@@ -1,11 +1,9 @@
 #!/bin/bash
 
-chmod +x kiosk.sh
-mv -f kiosk.sh /boot/kiosk.sh
-echo "\n/boot/kiosk.sh &\n\nexit 0\n" >> /etc/rc.local
+mv kiosk.sh ~
+mv .xinitrc ~/.xinitrc
 
-mv -f xinitrc /boot/xinitrc
-ln -sf /boot/initrx /home/pi/.xinitrc
+sudo apt-get update -y && sudo apt-get upgrade -y
 
 apt-get install --no-install-recommends -y \
     matchbox \
