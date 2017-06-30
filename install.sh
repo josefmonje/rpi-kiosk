@@ -1,8 +1,5 @@
 #!/bin/bash
 
-sudo mv kiosk.sh /opt
-sudo mv .xinitrc /opt
-
 sudo apt-get update -y && sudo apt-get upgrade -y
 
 sudo apt-get install --no-install-recommends -y \
@@ -20,3 +17,10 @@ sudo apt-get install --no-install-recommends -y \
     chromium-browser \
     rpi-chromium-mods \
     -y
+
+sudo mv kiosk.sh /opt
+sudo mv .xinitrc /opt
+
+cat >> ~/.bashrc <<- EOM
+/opt/kiosk.sh
+EOM
