@@ -21,6 +21,10 @@ sudo apt-get install --no-install-recommends -y \
 sudo mv kiosk.sh /opt
 sudo mv .xinitrc /opt
 
+sudo cat >> /boot/config.txt <<- EOM
+gpu_mem=256
+EOM
+
 cat >> ~/.bashrc <<- EOM
 /opt/kiosk.sh
 EOM
