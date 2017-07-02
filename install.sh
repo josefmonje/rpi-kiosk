@@ -25,6 +25,9 @@ sudo cat >> /boot/config.txt <<- EOM
 gpu_mem=256
 EOM
 
-cat >> ~/.bashrc <<- EOM
-/opt/kiosk.sh
+sudo cat >> /etc/kbd/config <<- EOM
+BLANK_TIME=0
+POWERDOWN_TIME=0
 EOM
+
+echo "/opt/kiosk.sh" >> ~/.bashrc
