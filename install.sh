@@ -18,8 +18,8 @@ sudo apt-get install --no-install-recommends -y \
     rpi-chromium-mods \
     -y
 
-sudo mv kiosk.sh /opt
-sudo mv .xinitrc /opt
+sudo cp kiosk.sh /opt
+sudo cp .xinitrc /opt
 
 sudo cat >> /boot/config.txt <<- EOM
 gpu_mem=256
