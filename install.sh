@@ -14,6 +14,8 @@ sudo apt-get install --no-install-recommends -y \
     sqlite3 \
     libnss3 \
     unclutter \
+    libgtk-3-0 \
+    libgl1-mesa-dri \
     chromium-browser \
     rpi-chromium-mods \
     -y
